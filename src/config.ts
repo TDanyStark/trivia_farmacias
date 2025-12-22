@@ -1,0 +1,1 @@
+export const URL_BASE = "/apps/abbott/trivia_farmacias";
