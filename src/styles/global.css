@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/apps/abbott/trivia_farmacias/fonts/Brandon_reg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/apps/abbott/trivia_farmacias/fonts/Brandon_blk.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/apps/abbott/trivia_farmacias/fonts/Brandon_light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@theme{
+  --color-purple-abbott: #753bbd;
+  --color-pink-abbott: #d787b5;
+  --color-purple-dark-abbott: #772583;
+
+  --font-brandon: "Brandon", sans-serif;
+  --font-georgia: Georgia, serif;
+}
+
+button {
+  @apply cursor-pointer;
+}

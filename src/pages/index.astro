@@ -1,11 +1,44 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "@/components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import { URL_BASE } from "@/config";
 ---
 
 <Layout>
-	<Welcome />
+  <div
+    class="min-h-screen lg:aspect-video bg-purple-abbott bg-cover bg-left lg:bg-center text-white "
+    style={`background-image: url(${URL_BASE}/images/bg-home.webp);`}
+  >
+    <Header />
+    <main
+      class="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto p-4 md:p-6 gap-4"
+    >
+      <section>
+        <h1 class="text-6xl font-light leading-[1.1]">
+          EL <span class="font-bold">PODER</span> QUE DA
+          <br />
+          EL <span class="font-bold">CONOCIMIENTO</span>
+        </h1>
+        <div class="mt-4 uppercase text-2xl">
+          <h2>¡Ponga a prueba su conocimiento</h2>
+          <p>
+            Sobre las propiedades diferenciales de las diferentes combinaciones
+            hormonales presentes en los métodos anticonceptivos!
+          </p>
+        </div>
+				<a href={`${URL_BASE}/trivia`} class="mt-8 inline-block bg-pink-abbott text-white font-bold py-3 px-6 rounded-lg text-2xl hover:bg-purple-abbott transition">
+					HAZ CLIC AQUÍ PARA EMPEZAR
+				</a>
+      </section>
+      <section>
+        <img
+          src={`${URL_BASE}/images/womans-home.webp`}
+          alt="Mujeres Abbott"
+          class="w-full h-auto rounded-lg shadow-lg lg:hidden"
+        />
+      </section>
+    </main>
+		<Footer />
+  </div>
 </Layout>
