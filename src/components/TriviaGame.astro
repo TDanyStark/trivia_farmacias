@@ -2,7 +2,7 @@
 import questions from '../data/questions';
 ---
 
-<div id="trivia-game-container" class="w-full max-w-3xl mx-auto bg-[#5e136e] text-white p-6 md:p-8 rounded-3xl shadow-2xl font-sans min-h-[600px] flex flex-col relative overflow-hidden border-4 border-purple-800/50">
+<div id="trivia-game-container" data-questions={JSON.stringify(questions)} class="w-full max-w-3xl mx-auto bg-[#5e136e] text-white p-6 md:p-8 rounded-3xl shadow-2xl font-sans min-h-[600px] flex flex-col relative overflow-hidden border-4 border-purple-800/50">
   
   <!-- Header: Progress & Stats -->
   <div id="game-header" class="mb-6 space-y-2">
@@ -106,8 +106,16 @@ import questions from '../data/questions';
   }
 </style>
 
-<script type="module" is:inline define:vars={{ questions }} >
+<script>
   import confetti from 'canvas-confetti';
+
+  // Get questions from DOM
+  const container = document.getElementById('trivia-game-container');
+  const questionsData = container?.dataset.questions;
+  if (!container || !questionsData) {
+    throw new Error('Questions data not found');
+  }
+  const questions = JSON.parse(questionsData);
 
   // State
   let currentQuestionIndex = 0;
@@ -116,7 +124,6 @@ import questions from '../data/questions';
   let questionAttempts = 0; // Attempts for the current question
 
   // DOM Elements
-  const container = document.getElementById('trivia-game-container');
   const questionText = document.getElementById('question-text');
   const choicesList = document.getElementById('choices-list');
   const feedbackCard = document.getElementById('feedback-card');
