@@ -2,7 +2,7 @@
 import questions from '../data/questions';
 ---
 
-<div id="trivia-game-container" data-questions={JSON.stringify(questions)} class="w-full max-w-3xl mx-auto bg-[#5e136e] text-white p-6 md:p-8 rounded-3xl shadow-2xl font-sans min-h-[600px] flex flex-col relative overflow-hidden border-4 border-purple-800/50">
+<div id="trivia-game-container" data-questions={JSON.stringify(questions)} class="w-full max-w-3xl mx-auto bg-[#5e136e] text-white p-6 md:p-8 rounded-3xl shadow-2xl font-sans min-h-150 flex flex-col relative overflow-hidden border-4 border-purple-800/50">
   
   <!-- Header: Progress & Stats -->
   <div id="game-header" class="mb-6 space-y-2">
@@ -11,17 +11,17 @@ import questions from '../data/questions';
       <span id="attempts-counter">Intentos: 0</span>
     </div>
     <div class="w-full bg-purple-900/50 rounded-full h-3 overflow-hidden border border-purple-700">
-      <div id="progress-bar" class="bg-gradient-to-r from-pink-500 to-purple-400 h-full rounded-full transition-all duration-500 ease-out" style="width: 0%"></div>
+      <div id="progress-bar" class="bg-linear-to-r from-pink-500 to-purple-400 h-full rounded-full transition-all duration-500 ease-out" style="width: 0%"></div>
     </div>
   </div>
 
   <!-- Question Title -->
-  <h2 id="question-text" class="text-xl md:text-2xl font-bold mb-6 leading-snug min-h-[80px]">
+  <h2 id="question-text" class="text-xl md:text-2xl font-bold mb-6 leading-snug min-h-20">
     <!-- Question injected here -->
   </h2>
 
   <!-- Main Content Area (Choices or Feedback) -->
-  <div id="game-content" class="flex-grow flex flex-col justify-center relative">
+  <div id="game-content" class="grow flex flex-col justify-center relative">
     
     <!-- Choices List -->
     <div id="choices-list" class="flex flex-col gap-4 w-full">
@@ -60,7 +60,7 @@ import questions from '../data/questions';
     </div>
 
     <!-- End Screen (Hidden by default) -->
-    <div id="end-screen" class="hidden flex flex-col items-center justify-center w-full h-full text-center space-y-8 animate-fade-in">
+    <div id="end-screen" class="hidden flex-col items-center justify-center w-full h-full text-center space-y-8 animate-fade-in">
       <div class="text-6xl">🎉</div>
       <h2 class="text-4xl font-bold text-pink-300">¡Cuestionario Finalizado!</h2>
       
@@ -77,7 +77,7 @@ import questions from '../data/questions';
   </div>
 
   <!-- Reference Footer -->
-  <div id="reference-footer" class="mt-6 pt-4 border-t border-purple-500/30 text-[10px] md:text-xs text-purple-200 leading-tight min-h-[40px]">
+  <div id="reference-footer" class="mt-6 pt-4 border-t border-purple-500/30 text-[10px] md:text-xs text-purple-200 leading-tight min-h-10">
     <!-- Reference text injected here -->
   </div>
 
@@ -110,9 +110,9 @@ import questions from '../data/questions';
   import confetti from 'canvas-confetti';
 
   // Get questions from DOM
-  const container = document.getElementById('trivia-game-container');
-  const questionsData = container?.dataset.questions;
-  if (!container || !questionsData) {
+  const container = document.getElementById('trivia-game-container')!;
+  const questionsData = container.dataset.questions;
+  if (!questionsData) {
     throw new Error('Questions data not found');
   }
   const questions = JSON.parse(questionsData);
@@ -124,22 +124,22 @@ import questions from '../data/questions';
   let questionAttempts = 0; // Attempts for the current question
 
   // DOM Elements
-  const questionText = document.getElementById('question-text');
-  const choicesList = document.getElementById('choices-list');
-  const feedbackCard = document.getElementById('feedback-card');
-  const feedbackTitle = document.getElementById('feedback-title');
-  const feedbackMessage = document.getElementById('feedback-message');
-  const feedbackIconContainer = document.getElementById('feedback-icon-container');
-  const nextBtn = document.getElementById('next-btn');
-  const referenceFooter = document.getElementById('reference-footer');
-  const progressBar = document.getElementById('progress-bar');
-  const questionCounter = document.getElementById('question-counter');
-  const attemptsCounter = document.getElementById('attempts-counter');
-  const endScreen = document.getElementById('end-screen');
-  const gameHeader = document.getElementById('game-header');
-  const gameContent = document.getElementById('game-content'); // Wrapper for choices/feedback
-  const restartBtn = document.getElementById('restart-btn');
-  const finalScoreText = document.getElementById('final-score-text');
+  const questionText = document.getElementById('question-text')!;
+  const choicesList = document.getElementById('choices-list')!;
+  const feedbackCard = document.getElementById('feedback-card')!;
+  const feedbackTitle = document.getElementById('feedback-title')!;
+  const feedbackMessage = document.getElementById('feedback-message')!;
+  const feedbackIconContainer = document.getElementById('feedback-icon-container')!;
+  const nextBtn = document.getElementById('next-btn')!;
+  const referenceFooter = document.getElementById('reference-footer')!;
+  const progressBar = document.getElementById('progress-bar')!;
+  const questionCounter = document.getElementById('question-counter')!;
+  const attemptsCounter = document.getElementById('attempts-counter')!;
+  const endScreen = document.getElementById('end-screen')!;
+  const gameHeader = document.getElementById('game-header')!;
+  const gameContent = document.getElementById('game-content')!; // Wrapper for choices/feedback
+  const restartBtn = document.getElementById('restart-btn')!;
+  const finalScoreText = document.getElementById('final-score-text')!;
 
   // Icons
   const sadFaceIcon = `
@@ -168,6 +168,7 @@ import questions from '../data/questions';
     questionAttempts = 0;
     
     endScreen.classList.add('hidden');
+    endScreen.classList.remove('flex');
     gameHeader.classList.remove('hidden');
     questionText.classList.remove('hidden');
     referenceFooter.classList.remove('hidden');
@@ -201,7 +202,7 @@ import questions from '../data/questions';
     feedbackCard.classList.add('hidden');
 
     // Create choices
-    q.choices.forEach((choice, index) => {
+    q.choices.forEach((choice: string, index: number) => {
       const btn = document.createElement('button');
       btn.className = `
         w-full text-left p-4 md:p-5 rounded-full border-2 border-pink-400/50 
@@ -226,7 +227,7 @@ import questions from '../data/questions';
     updateStats();
   }
 
-  function handleAnswer(selectedIndex) {
+  function handleAnswer(selectedIndex: number) {
     const q = questions[currentQuestionIndex];
     attempts++;
     questionAttempts++;
@@ -244,7 +245,7 @@ import questions from '../data/questions';
     }
   }
 
-  function showFeedback(isCorrect) {
+  function showFeedback(isCorrect: boolean) {
     const q = questions[currentQuestionIndex];
     
     choicesList.classList.add('hidden');
@@ -279,7 +280,7 @@ import questions from '../data/questions';
     // So "Siguiente" on incorrect screen might mean "Go back to question".
     
     const q = questions[currentQuestionIndex];
-    const isCurrentlyCorrect = feedbackTitle.textContent.includes("CORRECTA") && !feedbackTitle.textContent.includes("INCORRECTA");
+    const isCurrentlyCorrect = feedbackTitle.textContent?.includes("CORRECTA") && !feedbackTitle.textContent?.includes("INCORRECTA");
 
     if (!isCurrentlyCorrect) {
       // It was incorrect. Go back to choices.
@@ -304,6 +305,7 @@ import questions from '../data/questions';
     referenceFooter.classList.add('hidden');
     
     endScreen.classList.remove('hidden');
+    endScreen.classList.add('flex');
     
     finalScoreText.textContent = `Intentos totales: ${attempts}`;
 
@@ -317,7 +319,7 @@ import questions from '../data/questions';
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-    const randomInRange = (min, max) => Math.random() * (max - min) + min;
+    const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
 
     const interval = setInterval(function() {
       const timeLeft = animationEnd - Date.now();
