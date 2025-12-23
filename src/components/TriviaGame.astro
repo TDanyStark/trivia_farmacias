@@ -2,7 +2,7 @@
 import questions from '../data/questions';
 ---
 
-<div id="trivia-game-container" data-questions={JSON.stringify(questions)} class="w-full max-w-3xl mx-auto bg-[#5e136e] text-white p-6 md:p-8 rounded-3xl shadow-2xl font-sans min-h-150 flex flex-col relative overflow-hidden border-4 border-purple-800/50">
+<div id="trivia-game-container" data-questions={JSON.stringify(questions)} class="w-full max-w-3xl mx-auto text-white flex flex-col relative overflow-hidden pb-20">
   
   <!-- Header: Progress & Stats -->
   <div id="game-header" class="mb-6 space-y-2">
@@ -77,7 +77,7 @@ import questions from '../data/questions';
   </div>
 
   <!-- Reference Footer -->
-  <div id="reference-footer" class="mt-6 pt-4 border-t border-purple-500/30 text-[10px] md:text-xs text-purple-200 leading-tight min-h-10">
+  <div id="reference-footer" class="mt-6 pt-4 text-xs md:text-xs text-purple-200 leading-tight">
     <!-- Reference text injected here -->
   </div>
 
