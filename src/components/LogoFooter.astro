@@ -1,0 +1,20 @@
+---
+import { URL_BASE } from "@/config";
+
+interface Props {
+  height?: string;
+  url: string;
+  alt: string;
+}
+
+const { height = "h-14", url, alt } = Astro.props;
+---
+
+
+<div>
+  <img
+    class={`${height} object-contain`}
+    src={`${URL_BASE}/images/${url}`}
+    alt={alt}
+  />
+</div>
