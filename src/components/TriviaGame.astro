@@ -183,7 +183,7 @@ import questions from '../data/questions';
 
     // Update UI
     questionText.textContent = `${currentQuestionIndex + 1}. ${q.prompt}`;
-    referenceFooter.textContent = `Referencia: ${q.reference || ''}`;
+    referenceFooter.innerHTML = `<strong>Referencia: 1</strong> ${q.reference || ''}`;
     
     // Reset views
     choicesList.innerHTML = '';
