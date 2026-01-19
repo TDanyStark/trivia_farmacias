@@ -11,143 +11,147 @@ export type Question = {
 const questions: Question[] = [
 	{
 		id: 'q1',
-		prompt: '¿Cuál es la combinación ideal que ayuda a disminuir eficazmente los síntomas físicos relacionados con el ciclo menstrual, como la tensión mamaria y la sensación de hinchazón?',
+		prompt: '¿Cuál anticonceptivo oral ayuda mejor a disminuir la hinchazón y el dolor en los senos durante el ciclo menstrual?',
 		choices: [
-			'Drospirenona 3 mg + etinilestradiol 0,03 mg',
-			'Dienogest 2 mg + etinilestradiol 0,03 mg',
-			'Drospirenona 3 mg + etinilestradiol 0,02 mg'
+			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
+			'Dixi 20 (acetato de ciproterona 2 mg + etinilestradiol 0,02 mg)'
 		],
 		correctIndex: 0,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! La combinación de drospirenona 3 mg + etinilestradiol 0,03 mg, gracias al efecto antimineralocorticoide de la drospirenona, que disminuye los efectos relacionados con el sistema renina-angiotensina-aldosterona (SRAA) de retención de sodio y agua, ayuda a disminuir la tensión mamaria y la sensación de hinchazón.',
+			'¡Correcto! La combinación de drospirenona + etinilestradiol, en dosis normal, evita que el cuerpo retenga líquidos, lo que reduce la molestia en los senos y la sensación de hinchazón.',
 		reference:
 			'Machado RB, Pompei Lde M, Giribela AG, et al. Drospirenone/ethinylestradiol: a review on efficacy and noncontraceptive benefits. Womens Health (Lond). 2011;7(1):19-30.'
 	},
 	{
 		id: 'q2',
-		prompt: '¿Cuál es la combinación hormonal que ayuda a disminuir la cantidad y duración de los sangrados menstruales?',
+		prompt: '¿Qué anticonceptivo oral ayuda a que los sangrados menstruales sean más cortos y menos abundantes?',
 		choices: [
-			'Dienogest 2 mg + etinilestradiol 0,03 mg',
-			'Drospirenina 3 mg + etinilestradiol 0,02 mg',
-			'Drospirenina 3 mg + etinilestradiol 0,03 mg'
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
+			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
+			'Dixi 20 (acetato de ciproterona 2 mg + etinilestradiol 0,02 mg)'
 		],
 		correctIndex: 0,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! Las usuarias de dienogest + etinilestradiol tienen una reducción en los días y la cantidad de sangrado gracias a la acción antiproliferativa sobre el endometrio, lo que beneficia a las mujeres con sangrados menstruales abundantes.',
+			'¡Correcto! El dienogest, en combinación con etinilestradiol, disminuye la cantidad de sangrado y los días de período menstrual.',
 		reference:
 			'Pérez-Campos EF. Dienogest/etinilestradiol, anticonceptivo oral combinado. Cuestiones clínicas y prácticas. En información terapéutica. Siete Días Médicos. Revista de Atención Primaria. 2016;866:13-16.'
 	},
 	{
 		id: 'q3',
-		prompt: '¿Qué combinación hormonal es recomendable para las adolescentes, principalmente las que tienen mayor posibilidad de desapego al tratamiento?',
+		prompt: '¿Qué opción anticonceptiva es más práctica para las adolescentes que suelen olvidar las pastillas?',
 		choices: [
-			'Drospirenona + etinilestradiol en forma oral',
-			'Enantato de noretisterona + valerato de estradiol en forma inyectable mensual',
-			'Acetato de ciproterona + etinilestradiol en forma oral'
+			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
+			'Nofertyl (inyectable mensual de noretisterona 50 mg + valerato de estradiol 5 mg)',
+			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)'
 		],
 		correctIndex: 1,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! Un estudio demostró que el inyectable mensual que combina enantato de noretisterona + valerato de estradiol tiene un muy buen perfil de aceptabilidad entre las adolescentes.',
+			'¡Correcto! Es más fácil de cumplir porque solo se aplica una vez al mes, lo cual se traduce en un muy buen perfil de aceptabilidad entre las adolescentes.',
 		reference:
 			'Vallejo-Maldonado MS. Anticonceptivos inyectables combinados. Ginecol Obstet Mex. 2020;88(Supl 1):S32-S41.'
 	},
 	{
 		id: 'q4',
-		prompt: '¿Cuál es el componente progestagénico con mayor potencia antiandrogénica, es decir, con la mayor capacidad de bloquear la acción de las hormonas masculinas, como la testosterona, en el cuerpo?',
+		prompt: '¿Cuál progestina bloquea mejor los efectos de las hormonas masculinas como la testosterona?',
 		choices: ['Dienogest', 'Drospirenona', 'Acetato de ciproterona'],
 		correctIndex: 2,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! El acetato de ciproterona es la que tiene la mayor actividad antiandrogénica entre todas las progestinas, por eso, su uso está indicado en mujeres que presentan síntomas relacionados con el exceso de andrógenos, como el acné moderado-severo, el hirsutismo, la alopecia y la seborrea.',
+			'¡Correcto! El acetato de ciproterona es la progestina más potente contra manifestaciones relacionadas con el exceso de hormonas masculinas, como el acné, el exceso de vello o la caída del cabello.',
 		reference:
 			'Bitzer J, Römer T, Lopes da Silva Filho A. The use of cyproterone acetate/ethinyl estradiol in hyperandrogenic skin symptoms – a review. Eur J Contracept Reprod Health Care. 2017;22(3):172-182.'
 	},
 	{
 		id: 'q5',
-		prompt: '¿Cuál es la combinación hormonal que evita fluctuaciones en el peso corporal?',
+		prompt: '¿Cuál anticonceptivo oral ayuda a evitar cambios de peso relacionados con la retención de líquidos?',
 		choices: [
-			'Acetato de ciproterona 2 mg + etinilestradiol 0,035 mg',
-			'Drospirenona 3 mg + etinilestradiol 0,03 mg',
-			'Dienogest 2 mg + etinilestradiol 0,02 mg'
+			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)',
+			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
+			'Bellaface 20 (dienogest 2 mg + etinilestradiol 0,02 mg)'
 		],
 		correctIndex: 1,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! La combinación de drospirenona 3 mg + etinilestradiol 0,03 mg ayuda a contrarrestar la influencia de la retención de líquidos inducida por estrógenos, lo que evita las fluctuaciones del peso corporal.',
+			'¡Correcto! La combinación de drospirenona 3 mg + etinilestradiol 0,03 mg previene la retención de líquidos, lo que ayuda a mantener el peso más estable durante todo el ciclo.',
 		reference:
 			'Machado RB, Pompei Lde M, Giribela AG, et al. Drospirenone/ethinylestradiol: a review on efficacy and noncontraceptive benefits. Womens Health (Lond). 2011;7(1):19-30.'
 	},
 	{
 		id: 'q6',
-		prompt: '¿Cuál es la combinación hormonal que ayuda a disminuir considerablemente el dolor menstrual y los sangrados intermenstruales?',
+		prompt: '¿Qué anticonceptivo oral ayuda a disminuir el dolor menstrual fuerte y los sangrados fuera del período?',
 		choices: [
-			'Drospirenona 3 mg + etinilestradiol 0,02 mg',
-			'Acetato de ciproterona + etinilestradiol 0,03 mg',
-			'Dienogest 2 mg + etinilestradiol 0,02 mg'
+			'MIA 20 (drospirenona 3 mg + etinilestradiol 0,02 mg)',
+			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)',
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)'
 		],
 		correctIndex: 2,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! Las usuarias de dienogest + etinilestradiol notan una rápida mejoría del dolor menstrual incapacitante y una importante reducción de los sangrados intermenstruales. De hecho, con el uso continuo, el ciclo se regulariza.',
+			'¡Correcto! Las usuarias de dienogest + etinilestradiol notan una rápida mejoría del dolor menstrual incapacitante y una importante reducción de los sangrados fuera del período. De hecho, con el uso continuo, el ciclo se regulariza.',
 		reference:
 			'Pérez E. Ethinylestradiol/Dienogest in Oral Contraception 2010. Drugs. 2010;70 (6):681-9.'
 	},
 	{
 		id: 'q7',
-		prompt: 'Estas son las principales razones por las cuales el inyectable mensual de enantato de noretisterona + valerato de estradiol tiene un buen perfil de tolerabilidad y aceptabilidad:',
+		prompt: '¿Por qué el inyectable mensual Nofertyl (noretisterona + valerato de estradiol) es bien aceptado?',
 		choices: [
-			'No afecta el peso corporal, disminuye el dolor menstrual y no produce efectos negativos sobre los niveles de colesterol.',
+			'No altera el peso, disminuye el dolor menstrual y no afecta el colesterol.',
 			'Reduce los dolores de cabeza y protege contra las infecciones de transmisión sexual.',
 			'No interfiere con la sexualidad y tiene efectos beneficiosos sobre la memoria.'
 		],
 		correctIndex: 0,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! Además de la excelente eficacia anticonceptiva, enantato de noretisterona + valerato de estradiol se caracteriza por no influir negativamente en el metabolismo de los lípidos y reducir significativamente el dolor menstrual a lo largo de los ciclos de uso.',
+			'¡Correcto! Además de la excelente eficacia anticonceptiva, Nofertyl no afecta negativamente el metabolismo y ayuda a reducir el dolor menstrual.',
 		reference:
 			'Von Kesseru E, Aydinlik S, Etchepareborda JJ. Multicentred, phase III clinical trial of norethisterone enanthate 50 mg plus estradiol valerate 5 mg as a monthly injectable contraceptive; final three-year report. Contraceptio. 1994;50(4):329-37.'
 	},
 	{
 		id: 'q8',
-		prompt: 'En mujeres con síndrome de ovario poliquístico, ¿cuál es la combinación hormonal que ayuda a disminuir el exceso de andrógenos?',
-		choices: ['Dienogest + etinilestradiol', 'Acetato de ciproterona + etinilestradiol', 'Drospirenona + etinilestradiol'],
+		prompt: 'En mujeres con síndrome de ovario poliquístico, ¿cuál anticonceptivo oral ayuda más a disminuir el exceso de hormonas masculinas?',
+		choices: [
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
+			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)',
+			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)'
+		],
 		correctIndex: 1,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! Si bien la drospirenona y el dienogest tienen actividad antiandrogénica, el acetato de ciproterona, en combinación con etinilestradiol, proporciona un tratamiento eficaz para los síntomas cutáneos hiperandrogénicos relacionados con el síndrome de ovario poliquístico (SOP).',
+			'¡Correcto! Si bien la drospirenona y el dienogest pueden ayudar, el acetato de ciproterona es la progestina más efectiva para mejorar síntomas como acné severo y exceso de vello.',
 		reference:
 			'Ruan X, Kubba A, Aguilar A, et al. Use of cyproterone acetate/ethinylestradiol in polycystic ovary syndrome: rationale and practical aspects. Eur J Contracept Reprod Health Care. 2017 Jun;22(3):183-190.'
 	},
 	{
 		id: 'q9',
-		prompt: '¿Cuál es la combinación hormonal aprobada por la FDA para el tratamiento de los síntomas emocionales y físicos del trastorno disfórico premenstrual en mujeres que desean utilizar anticonceptivos hormonales?',
+		prompt: '¿Cuál es el anticonceptivo oral aprobado por la FDA para el tratamiento de los síntomas emocionales y físicos del trastorno disfórico premenstrual?',
 		choices: [
-			'Dienogest 2 mg + etinilestradiol 0,02 mg',
-			'Drospirenona 3 mg + etinilestradiol 0,02 mg',
-			'Dienogest 2 mg + etinilestradiol 0,03 mg'
+			'Bellaface 20 (dienogest 2 mg + etinilestradiol 0,02 mg)',
+			'MIA 20 (drospirenona 3 mg + etinilestradiol 0,02 mg)',
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)'
 		],
 		correctIndex: 1,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! La combinación de drospirenona 3 mg + etinilestradiol 0,02 mg ha demostrado ser eficaz tanto para disminuir los síntomas como para mejorar el funcionamiento diario de las mujeres con trastorno disfórico premenstrual. Además, el esquema 24/4 proporciona un nivel más estable de hormonas exógenas a lo largo del ciclo, lo que contribuye a una mayor estabilidad emocional.',
+			'¡Correcto! La drospirenona, en combinación con dosis baja de etinilestradiol, ayuda a mejorar tanto los síntomas físicos como emocionales del trastorno disfórico premenstrual, al mantener niveles hormonales más estables.',
 		reference:
 			'Bachmann G, Kopacz S. Drospirenone/ethinyl estradiol 3 mg/20 µg (24/4 day regimen): hormonal contraceptive choices - use of a fourth-generation progestin. Patient Prefer Adherence. 2009;3:259-64. Rapkin AJ, McDonald M, Winer SA. Ethinyl estradiol/drospirenone for the treatment of the emotional and physical symptoms of premenstrual dysphoric disorder. Womens Health (Lond). 2007;3(4):395-408.'
 	},
 	{
 		id: 'q10',
-		prompt: '¿Con cuál combinación hormonal las mujeres logran un control adecuado del ciclo menstrual y la mejoría de los signos de androgenización, como el acné leve-moderado, con menos efectos secundarios relacionados con los estrógenos?',
+		prompt: '¿Con cuál anticonceptivo oral las mujeres logran un buen control del ciclo y la mejoría del acné leve-moderado, con menos efectos secundarios?',
 		choices: [
-			'Dienogest 2 mg + etinilestradiol 0,02 mg',
-			'Drospirenona 3 mg + etinilestradiol 0,03 mg',
-			'Acetato de ciproterona + etinilestradiol 0,035 mg'
+			'Bellaface 20 (dienogest 2 mg + etinilestradiol 0,02 mg)',
+			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
+			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)'
 		],
 		correctIndex: 0,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! Las usuarias de dienogest + etinilestradiol, con una menor carga estrogénica (0,02 mg), logran un excelente control del ciclo menstrual y la reducción significativa de las lesiones de acné leve-moderado.',
+			'¡Correcto! Las usuarias de dienogest + etinilestradiol, con una menor carga hormonal, logran un excelente control del ciclo menstrual y la mejoría del acné leve-moderado con menos efectos secundarios.',
 		reference:
 			'Palacio J, Caicedo D. Clinical behavior of a cohort of adult women with facial acne treated with combined oral contraceptive: ethinylestradiol 20 μg/dienogest 2 mg. Inter J Women Health. 2017;9:835-42.'
 	}
