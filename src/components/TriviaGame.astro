@@ -120,7 +120,6 @@ import questions from '../data/questions';
   // State
   let currentQuestionIndex = 0;
   let attempts = 0; // Total attempts in the game
-  let isPerfectRun = true; // Remains true if user never gets a question wrong
   let questionAttempts = 0; // Attempts for the current question
 
   // DOM Elements
@@ -153,7 +152,6 @@ import questions from '../data/questions';
   function initGame() {
     currentQuestionIndex = 0;
     attempts = 0;
-    isPerfectRun = true;
     questionAttempts = 0;
     
     endScreen.classList.add('hidden');
@@ -225,8 +223,6 @@ import questions from '../data/questions';
     const isCorrect = selectedIndex === q.correctIndex;
 
     if (!isCorrect) {
-      // If wrong, we mark perfect run as false
-      isPerfectRun = false;
       showFeedback(false);
     } else {
       // If correct
@@ -297,8 +293,8 @@ import questions from '../data/questions';
     endScreen.classList.add('flex');
     
     finalScoreText.textContent = `Intentos totales: ${attempts}`;
-
-    if (isPerfectRun) {
+    // Trigger confetti when the user solved each question in exactly one attempt.
+    if (attempts === questions.length) {
       triggerConfetti();
     }
   }
