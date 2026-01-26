@@ -15,7 +15,7 @@ const questions: Question[] = [
 		choices: [
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
 			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
-			'Dixi 20 (acetato de ciproterona 2 mg + etinilestradiol 0,02 mg)'
+			'PostDay 1 (levonorgestrel 1,5 mg)'
 		],
 		correctIndex: 0,
 		feedbackIncorrect: '¡Intenta de nuevo!',
@@ -30,7 +30,7 @@ const questions: Question[] = [
 		choices: [
 			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
-			'Dixi 20 (acetato de ciproterona 2 mg + etinilestradiol 0,02 mg)'
+			'PostDay 1 (levonorgestrel 1,5 mg)'
 		],
 		correctIndex: 0,
 		feedbackIncorrect: '¡Intenta de nuevo!',
@@ -45,7 +45,7 @@ const questions: Question[] = [
 		choices: [
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
 			'Nofertyl (inyectable mensual de noretisterona 50 mg + valerato de estradiol 5 mg)',
-			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)'
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)'
 		],
 		correctIndex: 1,
 		feedbackIncorrect: '¡Intenta de nuevo!',
@@ -56,22 +56,26 @@ const questions: Question[] = [
 	},
 	{
 		id: 'q4',
-		prompt: '¿Cuál progestina bloquea mejor los efectos de las hormonas masculinas como la testosterona?',
-		choices: ['Dienogest', 'Drospirenona', 'Acetato de ciproterona'],
+		prompt: '¿Cuál opción está indicada como anticonceptivo de emergencia dentro de las 72 horas luego de haber mantenido relaciones sexuales sin protección?',
+		choices: [
+			'MIA 20 (drospirenona 3 mg + etinilestradiol 0,02 mg)',
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
+			'PostDay 1 (levonorgestrel 1,5 mg)'
+		],
 		correctIndex: 2,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! El acetato de ciproterona es la progestina más potente contra manifestaciones relacionadas con el exceso de hormonas masculinas, como el acné, el exceso de vello o la caída del cabello.',
+			'¡Correcto! PostDay (levonorgestrel 1,5 mg) es un método anticonceptivo de emergencia que ayuda a prevenir el embarazo antes de que comience, siempre y cuando se tome dentro de las 72 horas siguientes luego de haber mantenido relaciones sexuales sin protección o cuando el anticonceptivo habitual ha fallado. Debido a que es un método de respaldo, no debe utilizarse como un método anticonceptivo habitual.',
 		reference:
-			'Bitzer J, Römer T, Lopes da Silva Filho A. The use of cyproterone acetate/ethinyl estradiol in hyperandrogenic skin symptoms – a review. Eur J Contracept Reprod Health Care. 2017;22(3):172-182.'
+			'International Consortium for Emergency Contraception, International Federation of Gynecology and Obstetrics. Emergency Contraceptive Pills. Medical and Service Delivery Guidance. 2018.'
 	},
 	{
 		id: 'q5',
 		prompt: '¿Cuál anticonceptivo oral ayuda a evitar cambios de peso relacionados con la retención de líquidos?',
 		choices: [
-			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)',
+			'PostDay 1 (levonorgestrel 1,5 mg)',
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
-			'Bellaface 20 (dienogest 2 mg + etinilestradiol 0,02 mg)'
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)'
 		],
 		correctIndex: 1,
 		feedbackIncorrect: '¡Intenta de nuevo!',
@@ -85,7 +89,7 @@ const questions: Question[] = [
 		prompt: '¿Qué anticonceptivo oral ayuda a disminuir el dolor menstrual fuerte y los sangrados fuera del período?',
 		choices: [
 			'MIA 20 (drospirenona 3 mg + etinilestradiol 0,02 mg)',
-			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)',
+			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
 			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)'
 		],
 		correctIndex: 2,
@@ -112,24 +116,24 @@ const questions: Question[] = [
 	},
 	{
 		id: 'q8',
-		prompt: 'En mujeres con síndrome de ovario poliquístico, ¿cuál anticonceptivo oral ayuda más a disminuir el exceso de hormonas masculinas?',
+		prompt: '¿Cómo actúa el método anticonceptivo de emergencia PostDay (levonorgestrel 1,5 mg)?',
 		choices: [
-			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
-			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)',
-			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)'
+			'Interfiriendo con el desarrollo del embarazo.',
+			'Retrasando la ovulación.',
+			'Interfiriendo con el proceso de implantación.'
 		],
 		correctIndex: 1,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! Si bien la drospirenona y el dienogest pueden ayudar, el acetato de ciproterona es la progestina más efectiva para mejorar síntomas como acné severo y exceso de vello.',
+			'¡Correcto! PostDay (levonorgestrel 1,5 mg) retrasa temporalmente la ovulación. Esto quiere decir que actúa impidiendo la liberación de un óvulo, de tal manera que este no entre en contacto con el espermatozoide. Al no haber óvulo, no se produce la fertilización y, por lo tanto, no hay embarazo.',
 		reference:
-			'Ruan X, Kubba A, Aguilar A, et al. Use of cyproterone acetate/ethinylestradiol in polycystic ovary syndrome: rationale and practical aspects. Eur J Contracept Reprod Health Care. 2017 Jun;22(3):183-190.'
+			'International Consortium for Emergency Contraception, International Federation of Gynecology and Obstetrics. Emergency Contraceptive Pills. Medical and Service Delivery Guidance. 2018.'
 	},
 	{
 		id: 'q9',
 		prompt: '¿Cuál es el anticonceptivo oral aprobado por la FDA para el tratamiento de los síntomas emocionales y físicos del trastorno disfórico premenstrual?',
 		choices: [
-			'Bellaface 20 (dienogest 2 mg + etinilestradiol 0,02 mg)',
+			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
 			'MIA 20 (drospirenona 3 mg + etinilestradiol 0,02 mg)',
 			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)'
 		],
@@ -142,18 +146,18 @@ const questions: Question[] = [
 	},
 	{
 		id: 'q10',
-		prompt: '¿Con cuál anticonceptivo oral las mujeres logran un buen control del ciclo y la mejoría del acné leve-moderado, con menos efectos secundarios?',
+		prompt: '¿Con cuál anticonceptivo las mujeres logran un buen control del ciclo, con menos días de duración y cantidad de sangrado y la mejoría del acné leve-moderado?',
 		choices: [
-			'Bellaface 20 (dienogest 2 mg + etinilestradiol 0,02 mg)',
+			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
-			'Dixi 35 (acetato de ciproterona 2 mg + etinilestradiol 0,035 mg)'
+			'Nofertyl (inyectable mensual de noretisterona 50 mg + valerato de estradiol 5 mg)'
 		],
 		correctIndex: 0,
 		feedbackIncorrect: '¡Intenta de nuevo!',
 		feedbackCorrect:
-			'¡Correcto! Las usuarias de dienogest + etinilestradiol, con una menor carga hormonal, logran un excelente control del ciclo menstrual y la mejoría del acné leve-moderado con menos efectos secundarios.',
+			'¡Correcto! Las usuarias de dienogest + etinilestradiol, logran un excelente control del ciclo menstrual y la mejoría del acné leve-moderado gracias a las propiedades del dionegest sobre el endometrio y la piel.',
 		reference:
-			'Palacio J, Caicedo D. Clinical behavior of a cohort of adult women with facial acne treated with combined oral contraceptive: ethinylestradiol 20 μg/dienogest 2 mg. Inter J Women Health. 2017;9:835-42.'
+			'Pérez-Campos EF. Dienogest/etinilestradiol, anticonceptivo oral combinado. Cuestiones clínicas y prácticas. En información terapéutica. Siete Días Médicos. Revista de Atención Primaria. 2016;866:13-16.'
 	}
 ];
 
