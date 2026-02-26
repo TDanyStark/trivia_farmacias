@@ -11,7 +11,7 @@ export type Question = {
 const questions: Question[] = [
 	{
 		id: 'q1',
-		prompt: '¿Cuál anticonceptivo oral ayuda mejor a disminuir la hinchazón y el dolor en los senos durante el ciclo menstrual?',
+		prompt: '¿Cuál anticonceptivo oral combinado ayuda mejor a disminuir la hinchazón y el dolor en los senos durante el ciclo menstrual?',
 		choices: [
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
 			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
@@ -26,7 +26,7 @@ const questions: Question[] = [
 	},
 	{
 		id: 'q2',
-		prompt: '¿Qué anticonceptivo oral ayuda a que los sangrados menstruales sean más cortos y menos abundantes?',
+		prompt: '¿Cuál anticonceptivo oral combinado ayuda a que los sangrados menstruales sean más cortos y menos abundantes?',
 		choices: [
 			'Bellaface (dienogest 2 mg + etinilestradiol 0,03 mg)',
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
@@ -41,7 +41,7 @@ const questions: Question[] = [
 	},
 	{
 		id: 'q3',
-		prompt: '¿Qué opción anticonceptiva es más práctica para las adolescentes que suelen olvidar las pastillas?',
+		prompt: '¿Cuál opción anticonceptiva es más práctica para las adolescentes que suelen olvidar las pastillas?',
 		choices: [
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
 			'Nofertyl (inyectable mensual de noretisterona 50 mg + valerato de estradiol 5 mg)',
@@ -71,7 +71,7 @@ const questions: Question[] = [
 	},
 	{
 		id: 'q5',
-		prompt: '¿Cuál anticonceptivo oral ayuda a evitar cambios de peso relacionados con la retención de líquidos?',
+		prompt: '¿Cuál anticonceptivo oral combinado ayuda a evitar cambios de peso relacionados con la retención de líquidos?',
 		choices: [
 			'PostDay 1 (levonorgestrel 1,5 mg)',
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
@@ -86,7 +86,7 @@ const questions: Question[] = [
 	},
 	{
 		id: 'q6',
-		prompt: '¿Qué anticonceptivo oral ayuda a disminuir el dolor menstrual fuerte y los sangrados fuera del período?',
+		prompt: '¿Cuál anticonceptivo oral combinado ayuda a disminuir el dolor menstrual fuerte y los sangrados fuera del período?',
 		choices: [
 			'MIA 20 (drospirenona 3 mg + etinilestradiol 0,02 mg)',
 			'MIA (drospirenona 3 mg + etinilestradiol 0,03 mg)',
